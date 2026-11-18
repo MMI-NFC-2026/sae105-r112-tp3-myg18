@@ -79,3 +79,29 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
   /* Affiche l'image comme un bloc - https://developer.mozilla.org/fr/docs/Web/CSS/display */
   display: block;
 }
+
+/* ===== Étape 7 : boutons posés sur le carrousel ===== */
+
+/* Le conteneur commun (images + boutons) sert de repère pour position: absolute - https://developer.mozilla.org/fr/docs/Web/CSS/position */
+.carousel__viewport {
+  position: relative;
+}
+
+/* La barre de boutons recouvre tout le carrousel : un bouton à gauche, l'autre à droite, centrés verticalement */
+.carousel__controls {
+  position: absolute;
+  /* inset: 0 = top, right, bottom et left à 0 - https://developer.mozilla.org/fr/docs/Web/CSS/inset */
+  inset: 0;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 16px;
+  /* Laisse passer les clics/le scroll vers les images, sauf sur les boutons - https://developer.mozilla.org/fr/docs/Web/CSS/pointer-events */
+  pointer-events: none;
+}
+
+.carousel__button {
+  pointer-events: auto;
+  /* Fond blanc semi-transparent pour que la flèche reste visible sur les images */
+  background-color: rgb(255 255 255 / 0.8);
+  cursor: pointer;
+}
