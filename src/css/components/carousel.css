@@ -64,6 +64,8 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
   margin-right: -24px;
   /* Définit le type de défilement pour accrocher les éléments - https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-type */
   scroll-snap-type: x mandatory;
+  /* Défilement en douceur (ancres) - https://developer.mozilla.org/fr/docs/Web/CSS/scroll-behavior */
+  scroll-behavior: smooth;
 }
 
 .carousel__item {
